@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc 'src/repositories/Admin_Repository/test/admin_repository.test.ts'",
     "start": "nodemon src/index.ts",
-    "test": "dotenv -e .env.test nyc jest"
+    "test": "dotenv -e .env.test jest"
   },
   "keywords": [],
   "author": "",
