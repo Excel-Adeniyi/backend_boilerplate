@@ -1,0 +1,2 @@
+docker logs -f rccg-nodejs-1
+docker compose up -d --build

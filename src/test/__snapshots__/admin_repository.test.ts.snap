@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin Repository createAdmin should create a user 1`] = `
+{
+  "affectedRows": 1,
+  "changedRows": 0,
+  "fieldCount": 0,
+  "info": "",
+  "insertId": 3,
+  "serverStatus": 2,
+  "warningStatus": 0,
+}
+`;
+
+exports[`Admin Repository login the admin account should find a password by username 1`] = `
+[
+  {
+    "password": "testpass",
+  },
+]
+`;
+
+exports[`Admin Repository login the admin account should find a user by username and password 1`] = `
+[
+  {
+    "password": "testpass",
+  },
+]
+`;
