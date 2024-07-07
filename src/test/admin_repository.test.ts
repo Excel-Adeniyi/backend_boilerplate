@@ -16,9 +16,9 @@ describe('Admin Repository', () => {
             const userData = { username: 'testuser', password: 'testpass', name: "tester", phone: "09826352611", email: "test@test.com" };
             const user = await adminRepo.createAdmin(userData);
 
-            expect(user).toMatchObject({
-                affectedRows: 1,
-            })
+            expect(user).toMatchSnapshot(
+                "DatabaseError:user already exist"
+            )
         });
     });
 
@@ -32,7 +32,7 @@ describe('Admin Repository', () => {
             expect(user).toMatchSnapshot(
                 [
                     {
-                        password: "testpass"
+                        password: "testerpasser"
                     }
                 ]
 
@@ -40,4 +40,17 @@ describe('Admin Repository', () => {
             );
         });
     });
+
+    describe("Update Admin Credentials", () => {
+        it("should update the admin credentials by the password given to it", async () => {
+            const adminRepo = new AdminRepository(pool)
+            const updateAdmin = await adminRepo.updateAdmin(18, 'testerpasser')
+
+            expect(updateAdmin).toMatchObject(
+                {
+                    affectedRows: 1
+                }
+            )
+        })
+    })
 });

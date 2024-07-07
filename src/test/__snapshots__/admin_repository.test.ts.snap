@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Admin Repository Update Admin Credentials should update the admin credentials by the password given to it 1`] = `
+{
+  "affectedRows": 1,
+  "changedRows": 1,
+  "fieldCount": 0,
+  "info": "Rows matched: 1  Changed: 1  Warnings: 0",
+  "insertId": 0,
+  "serverStatus": 2,
+  "warningStatus": 0,
+}
+`;
+
 exports[`Admin Repository createAdmin should create a user 1`] = `
 {
   "affectedRows": 1,
