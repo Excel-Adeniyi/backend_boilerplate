@@ -16,7 +16,6 @@ export class AdminRepository implements IAdminRepository {
         throw new Error("Method not implemented.");
     }
     async createAdmin(payload: AdminDetails): Promise<AdminDetails | RowDataPacket[] | QueryResult> {
-        console.log("PAYLOAD", payload)
         const countquery1 = 'SELECT COUNT (*) as count FROM account WHERE username = ?'
         const countquery2 = 'SELECT COUNT (*) as count FROM admin_info WHERE email = ?'
         const countquery3 = 'SELECT COUNT (*) as count FROM admin_info WHERE phone = ?'
@@ -30,7 +29,6 @@ export class AdminRepository implements IAdminRepository {
         try {
             connection.beginTransaction()
             const [SELECTCOUNT] = await connection.execute(countquery1, [payload.username])
-            console.log("SELECT COUNT", SELECTCOUNT)
             const selectcounts = SELECTCOUNT as RowDataPacket[]
             if (selectcounts[0].count > 0) {
                 connection.rollback()
@@ -40,7 +38,6 @@ export class AdminRepository implements IAdminRepository {
 
             const [selectResults] = await connection.execute(selectquery2, params1)
             const selectedResults = selectResults as RowDataPacket[]
-            console.log('SELECT RESULTS', selectedResults[0].id)
 
             const [SELECTCOUNT2] = await connection.execute(countquery2, [payload.email])
             const selectcounts2 = SELECTCOUNT2 as RowDataPacket[]

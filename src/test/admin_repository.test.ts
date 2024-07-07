@@ -28,15 +28,9 @@ describe('Admin Repository', () => {
 
 
             const user = await loginRepo.loginAdmin('testuser');
-
+            console.log(user)
             expect(user).toMatchSnapshot(
-                [
-                    {
-                        password: "testerpasser"
-                    }
-                ]
-
-
+                `[ { password: 'testerpasser' } ]`
             );
         });
     });

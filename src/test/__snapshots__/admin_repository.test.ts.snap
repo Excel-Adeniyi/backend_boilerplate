@@ -32,6 +32,14 @@ exports[`Admin Repository login the admin account should find a password by user
 ]
 `;
 
+exports[`Admin Repository login the admin account should find a password by username: [ { password: 'testerpasser' } ] 1`] = `
+[
+  {
+    "password": "testerpasser",
+  },
+]
+`;
+
 exports[`Admin Repository login the admin account should find a user by username and password 1`] = `
 [
   {
