@@ -24,12 +24,20 @@ exports[`Admin Repository createAdmin should create a user 1`] = `
 }
 `;
 
+exports[`Admin Repository createAdmin should create a user: [DatabaseError: DatabaseError: user already exist] 1`] = `[DatabaseError: DatabaseError: user already exist]`;
+
 exports[`Admin Repository login the admin account should find a password by username 1`] = `
 [
   {
     "password": "testpass",
   },
 ]
+`;
+
+exports[`Admin Repository login the admin account should find a password by username: [ { "password": "testerpasser" } ] 1`] = `
+{
+  "password": "testerpasser",
+}
 `;
 
 exports[`Admin Repository login the admin account should find a password by username: [ { password: 'testerpasser' } ] 1`] = `

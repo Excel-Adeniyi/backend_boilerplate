@@ -17,7 +17,7 @@ const poolOptions: PoolOptions = {
     port: dbPort ? parseInt(dbPort, 10) : undefined,
     connectionLimit: 10
 }
-console.log(poolOptions)
+// console.log(poolOptions)
 const pool: Pool = createPool(poolOptions)
-console.log(pool)
+// console.log(pool)
 export default pool

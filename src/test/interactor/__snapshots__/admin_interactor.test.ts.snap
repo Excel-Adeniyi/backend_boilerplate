@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin Interactor create Admin should be able to create admin account:  [DatabaseError: DatabaseError: user already exist] 1`] = `[DatabaseError: DatabaseError: user already exist]`;
+
+exports[`Admin Interactor create Admin should be able to create admin account: [DatabaseError: DatabaseError: user already exist] 1`] = `[DatabaseError: DatabaseError: user already exist]`;

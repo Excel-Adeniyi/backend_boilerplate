@@ -12,7 +12,7 @@ export class AdminRepository implements IAdminRepository {
         this.pool = pool;
     }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    loginAdmin(username: string, password: string): Promise<AdminDetails | QueryResult> {
+    loginAdmin(username: string, password: string): Promise<AdminDetails | RowDataPacket[] | QueryResult> {
         throw new Error("Method not implemented.");
     }
     async createAdmin(payload: AdminDetails): Promise<AdminDetails | RowDataPacket[] | QueryResult> {
