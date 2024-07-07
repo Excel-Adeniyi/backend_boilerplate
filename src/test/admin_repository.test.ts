@@ -39,12 +39,5 @@ describe('Admin Repository', () => {
 
             );
         });
-
-        // it('should return null if no user found', async () => {
-        //     const loginRepo = new AdminLoginRepository(pool)
-        //     const user = await loginRepo.loginAdmin('testuser',);
-
-        //     expect(user).to.be.null;
-        // });
     });
 });
